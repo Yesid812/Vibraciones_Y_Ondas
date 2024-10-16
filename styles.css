@@ -1,0 +1,126 @@
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #13171c;
+    color: #FFFFFF;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d2477;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Contenedor principal */
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+/* Navbar */
+.navbar ul {
+    
+    display: flex;
+    color: #FFFFFF;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Contenedor de contenido */
+.content {
+    display: flex;
+    gap: 10px;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+
+#simulator-container {
+    width: 600px;
+    height: 320px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f1f1;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+/* Contenedor para gráficos */
+.plot-container {
+    width: 500px;
+    height: 320px;
+    border: 1px solid #000;
+}
+
+/* Controles */
+.controls-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Dos columnas */
+    grid-gap: 15px; /* Espacio entre los elementos */
+    padding: 20px;
+    font-weight: 450;
+    background-color: #53a374;
+    color: #000;
+    border: 2px solid #000;
+    width: 900px;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.control-item {
+    display: flex;
+    flex-direction: column; /* Mantener el <p> y el <input> en columna */
+    align-items: flex-start; /* Alinear los elementos a la izquierda */
+}
+
+.control-item input,
+.control-item button {
+    width: 100%; /* Que los botones y los inputs ocupen todo el ancho de la celda */
+}
+.buttons {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #3d2477;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ac8a8a;
+}
