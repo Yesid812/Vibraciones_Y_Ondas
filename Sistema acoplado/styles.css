@@ -1,0 +1,151 @@
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #13171c;
+    color: #FFFFFF;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d2477;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Contenedor principal */
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+/* Navbar */
+.navbar ul {
+    
+    display: flex;
+    color: #FFFFFF;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Contenedor de contenido */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+
+#simulator-container {
+    width: 600px;
+    height: 320px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f1f1;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+/* Contenedor para gráficos */
+.plot-container {
+    width: 500px;
+    height: 320px;
+    border: 1px solid #000;
+}
+
+/* Controles */
+.controls-container {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr); /* Dos columnas */
+    grid-gap: 15px; /* Espacio entre los elementos */
+    padding: 20px;
+    justify-content: space-between;
+    font-weight: 450;
+    background-color: #53a374;
+    color: #000;
+    border: 2px solid #000;
+    width: 900px;
+    max-width: 900px;
+    margin-top: 20px;
+}
+.controls-left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-gap: 10px; /* Espacio entre los elementos */
+}
+
+.equation-container {
+    background-color: #f9f9f9; /* Fondo claro para destacar */
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0; /* Espacio entre el contenedor y otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.equation {
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    line-height: 1.5; /* Espaciado entre líneas */
+    margin: 5px 0; /* Espacio vertical entre ecuaciones */
+}
+
+.control-item {
+    display: flex;
+    flex-direction: column; /* Mantener el <p> y el <input> en columna */
+    align-items: flex-start; /* Alinear los elementos a la izquierda */
+}
+
+.control-item input,
+.control-item button {
+    width: 100%; /* Que los botones y los inputs ocupen todo el ancho de la celda */
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    gap: 10px;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3d2477;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ac8a8a;
+}

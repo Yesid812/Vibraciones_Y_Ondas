@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Osciladores acoplados</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Librerías externas -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/addons/p5.sound.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h3>Osciladores acoplados</h3>
+    </div>
+
+    <div class="main-container">
+        <div class="content">
+            <div id="simulator-container">
+            </div>
+            <div class="plot-container" id="Movimientos">
+            </div>
+        </div>
+
+        <div class="controls-container">
+            <div class="controls-left">
+                <h4>Radio de la polea: 1m</h4>
+                    <div class="control-item">
+                        <p class="info-text">K1 (N/m): <span id="sliderK1Value">10</span></p>
+                        <input type="number" id="k1-slider" name="constante-elastica" value="10" min="10" max="1000" step="10" oninput="updateSliderValue('k1-slider', 'sliderK1Value')"/>
+                    </div>
+                    <div class="control-item">
+                        <p class="info-text">Masa de la polea (M): <span id="sliderMPoleaValue">2</span></p>
+                        <input type="number" id="M-slider" name="masa-polea" value="2" min="0.1" max="10" step="0.1" oninput="updateSliderValue('M-slider', 'sliderMPoleaValue')"/>
+                    </div>
+                    
+                    <div class="control-item">
+                        <p class="info-text">K2 (N/m): <span id="sliderK2Value">5</span></p>
+                        <input type="number" id="k2-slider" name="constante-elastica" value="5" min="10" max="1000" step="10" oninput="updateSliderValue('k2-slider', 'sliderK2Value')"/>
+                    </div>
+                    <div class="control-item">
+                        <p class="info-text">Masa (m): <span id="sliderMValue">1</span></p>
+                        <input type="number" id="m-slider" name="masa" value="1" min="0.1" max="10" step="0.1" oninput="updateSliderValue('m-slider', 'sliderMValue')"/>
+                    </div>
+                    <div class="control-item">
+                        <p class="info-text">Posicion inicial bloque (m): <span id="sliderPBValue">5</span></p>
+                        <input type="number" id="PB-slider" name="velocidad-inicial-bloque" value="0.15" min="-5" max="5" step="0.1" oninput="updateSliderValue('PB-slider', 'sliderPBValue')"/>
+                    </div>
+                    <div class="control-item">
+                        <p class="info-text">Posicion inicial polea (rads): <span id="sliderPPValue">0.15</span></p>
+                        <input type="number" id="PP-slider" name="velocidad-inicial-polea" value="0.15" min="-5" max="5" step="0.1" oninput="updateSliderValue('PP-slider', 'sliderPPValue')"/>
+                    </div>
+            </div>
+            
+            <div class="controls-right">
+                <div class="equation-container">
+                    <div class="equation" id="Ecuacion">
+                        Ecuación 1: <span id="ecuacion1">y(t)</span>
+                    </div>
+                    <div class="equation" id="Ecuacion2">
+                        Ecuación 2: <span id="ecuacion2">Θ(t)</span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="control-item">
+                        <button id="simularButton" class="button-start">Simular</button>
+                    </div>
+            
+                    <div class="control-item">
+                        <button id="reiniciarButton" class="button-stop">Pausar</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <!-- Scripts al final para asegurarse de que el DOM está cargado -->
+    <script src="Acoplados.js"></script>
+</body>
+</html>
